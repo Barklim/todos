@@ -37,6 +37,7 @@ Make sure you have the following installed
 - github ci
 - dotenv
 - todos for all, active, completed
+- ban
 - relative paths for imports like @/module/ui/...
 - Keyboard pressing (radix ui?) e.t.c
 
