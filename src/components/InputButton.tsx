@@ -1,3 +1,4 @@
+import { FC } from "react";
 import {
   Flex,
   InputGroup,
@@ -14,7 +15,7 @@ interface InputButtonProps {
   addTodo: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }
 
-const InputButton = ({ todo, setTodo, addTodo }: InputButtonProps) => {
+const InputButton: FC<InputButtonProps> = ({ todo, setTodo, addTodo }) => {
   const { colorMode } = useColorMode();
   return (
     <Flex
