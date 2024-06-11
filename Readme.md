@@ -2,7 +2,7 @@
 
 Based todos application with TypeScript, React and React Hooks.
 
-- Client - [vercel](https://todos-xjmj9eziq-klim-barks-projects.vercel.app/)
+- Client - [vercel](https://todos-nkpjotlrc-klim-barks-projects.vercel.app/)
 - json-server - [vercel](https://todo-list-json-server-hnyxyyqsa-klim-barks-projects.vercel.app/)
 
 ## Run application
