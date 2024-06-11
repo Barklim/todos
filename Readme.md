@@ -2,7 +2,7 @@
 
 Based todos application with TypeScript, React and React Hooks.
 
-- Client - [vercel](https://todos-nkpjotlrc-klim-barks-projects.vercel.app/)
+- Client - [vercel](https://todos-swart-eight.vercel.app/)
 - json-server - [vercel](https://todo-list-json-server-hnyxyyqsa-klim-barks-projects.vercel.app/)
 
 ## Run application
@@ -39,6 +39,7 @@ Make sure you have the following installed
 ## Todo
 
 - jest
+- add some styles
 - down button must close todos with animation
 - relative paths for imports like @/module/ui/...
 - local storage or indexdb
