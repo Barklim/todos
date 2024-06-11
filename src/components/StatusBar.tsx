@@ -17,6 +17,9 @@ export const StatusBar: FC<StatusBarProps> = ({
   handleCompletedClick,
 }) => {
   const [isMobileView, setIsMobileView] = useState(false);
+  const [selectedTab, setSelectedTab] = useState<
+    "all" | "active" | "completed"
+  >("all");
   const { colorMode } = useColorMode();
 
   useEffect(() => {
@@ -32,6 +35,23 @@ export const StatusBar: FC<StatusBarProps> = ({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleTabClick = (tab: "all" | "active" | "completed") => {
+    setSelectedTab(tab);
+    switch (tab) {
+      case "all":
+        handleAllClick();
+        break;
+      case "active":
+        handleActiveClick();
+        break;
+      case "completed":
+        handleCompletedClick();
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
     <Box fontWeight={"700"} color={"grey"}>
@@ -66,23 +86,26 @@ export const StatusBar: FC<StatusBarProps> = ({
             gap={"1em"}
           >
             <Text
-              onClick={handleAllClick}
+              onClick={() => handleTabClick("all")}
               cursor={"pointer"}
               _hover={{ color: colorMode === "light" ? "black" : "white" }}
+              color={selectedTab === "all" ? "white" : "inherit"}
             >
               All
             </Text>
             <Text
-              onClick={handleActiveClick}
+              onClick={() => handleTabClick("active")}
               cursor={"pointer"}
               _hover={{ color: colorMode === "light" ? "black" : "white" }}
+              color={selectedTab === "active" ? "white" : "inherit"}
             >
               Active
             </Text>
             <Text
-              onClick={handleCompletedClick}
+              onClick={() => handleTabClick("completed")}
               cursor={"pointer"}
               _hover={{ color: colorMode === "light" ? "black" : "white" }}
+              color={selectedTab === "completed" ? "white" : "inherit"}
             >
               Completed
             </Text>
@@ -107,23 +130,26 @@ export const StatusBar: FC<StatusBarProps> = ({
             gap={"1em"}
           >
             <Text
-              onClick={handleAllClick}
+              onClick={() => handleTabClick("all")}
               cursor={"pointer"}
               _hover={{ color: colorMode === "light" ? "black" : "white" }}
+              color={selectedTab === "all" ? "white" : "inherit"}
             >
               All
             </Text>
             <Text
-              onClick={handleActiveClick}
+              onClick={() => handleTabClick("active")}
               cursor={"pointer"}
               _hover={{ color: colorMode === "light" ? "black" : "white" }}
+              color={selectedTab === "active" ? "white" : "inherit"}
             >
               Active
             </Text>
             <Text
-              onClick={handleCompletedClick}
+              onClick={() => handleTabClick("completed")}
               cursor={"pointer"}
               _hover={{ color: colorMode === "light" ? "black" : "white" }}
+              color={selectedTab === "completed" ? "white" : "inherit"}
             >
               Completed
             </Text>
