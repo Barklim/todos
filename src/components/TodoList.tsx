@@ -1,5 +1,5 @@
 import { Todo } from "../services/Todo.dto";
-import { Dispatch, SetStateAction, useEffect } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import TodoItem from "./TodoItem";
 import service from "../services";
